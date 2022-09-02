@@ -90,7 +90,7 @@ int main(int argc, char *argv[])
 ```
 
 ```cpp
-//优化中间开始回溯版本
+// 优化中间开始回溯版本
 #include <iostream>
 #include <memory>
 #include <ctime>
@@ -133,5 +133,15 @@ int cal(int c, int v, int count)
 	}
 	// 测试结束
 	return count;
+}
+
+int main(int argc, char *argv[])
+{
+	clock_t begin = clock();
+	int count = 0;
+	cout << cal(2, 100, count) << endl;
+	clock_t end = clock();
+	cout << "cost time: " << double(end - begin) / CLOCKS_PER_SEC << endl;
+	return 0;
 }
 ```
