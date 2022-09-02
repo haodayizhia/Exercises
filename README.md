@@ -88,3 +88,50 @@ int main(int argc, char *argv[])
 	return 0;
 }
 ```
+
+```cpp
+//优化中间开始回溯版本
+#include <iostream>
+#include <memory>
+#include <ctime>
+
+using namespace std;
+
+int cal(int c, int v, int count)
+{
+	// 如果还有电压长度（v）和一个以上的芯片(c)，继续分
+	if (c > 1 && v > 0)
+	{
+		int right_before;
+		int left_before;
+		// 从中间开始往前找分割点，在i处分割，右侧剩c个芯片，v-i个电压长度，左侧剩c-1个芯片，i-1个电压长度
+		for (int i = (v + 1) / 2; i > 0; --i)
+		{
+			int right = cal(c, v - i, 0);
+			int left = cal(c - 1, i - 1, 0);
+			if (right >= left)
+			{
+				// 确定临界点为i还是i+1
+				if ((i < (v + 1) / 2) & (right > left_before))
+				{
+					// i+1处分割，计数加一
+					count = 1 + left_before;
+					break;
+				}
+				// i处分割，计数加一
+				count = 1 + right;
+				break;
+			}
+			right_before = right;
+			left_before = left;
+		}
+	}
+	else
+	{
+		// 最后按顺序遍历或者芯片为0
+		count += v;
+	}
+	// 测试结束
+	return count;
+}
+```
