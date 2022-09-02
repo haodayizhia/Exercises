@@ -90,7 +90,7 @@ int main(int argc, char *argv[])
 ```
 
 ```cpp
-// 优化中间开始回溯版本
+// 优化：中间开始回溯版本
 #include <iostream>
 #include <memory>
 #include <ctime>
