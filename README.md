@@ -220,3 +220,44 @@ int main(int argc, char *argv[])
 	return 0;
 }
 ```
+
+```cpp
+// 真·强化版本，深刻认识分割排列规律
+#include <iostream>
+#include <memory>
+#include <ctime>
+#include <vector>
+
+using namespace std;
+
+// c个电压，k次，返回最多能测多少个电压
+int cal(int c, int k)
+{
+	int v = 0;
+	if (c == 1)
+		return k;
+	if (k == 0)
+		return 0;
+	for (int i = k; i > 0; --i)
+		v += 1 + cal(c - 1, i - 1);
+	return v;
+}
+
+int main(int argc, char *argv[])
+{
+	clock_t begin = clock();
+	int c = 0, v = 0, k = 0;
+	cin >> c >> v;
+	// 寻找电压范围
+	while (v > cal(c, k))
+		++k;
+	cout << k << endl;
+	clock_t end = clock();
+	cout << "cost time: " << double(end - begin) / CLOCKS_PER_SEC << endl;
+	return 0;
+}
+```
+
+```cpp
+// final_version，简化上一个版本
+```
