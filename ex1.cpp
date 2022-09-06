@@ -1,4 +1,3 @@
-```cpp
 #include <iostream>
 #include <memory>
 
@@ -220,4 +219,3 @@ int main(int argc, char *argv[])
 
 ```cpp
 // final_version，简化上一个版本
-```
