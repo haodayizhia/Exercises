@@ -43,7 +43,7 @@ int main(int argc, char *argv[])
         else
         {
             for (auto &j : value)
-                if (!(j.first - j.first / jy[i - 1]))
+                if (!(j.first % jy[i - 1]))
                     count += j.second;
         }
     }
