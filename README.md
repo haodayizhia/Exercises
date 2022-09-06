@@ -2,7 +2,7 @@
 
 Some little exercises
 
-## Exercise 1
+## [Exercise 1](https://github.com/haodayizhia/Exercises/blob/0c211671e2fb0811c85e70e87c153931255c80e4/ex1.cpp)
 
 > 给你C(Chips)枚相同的芯片，芯片用于测试的电压挡位从1到V(Volt)。
 >
