@@ -38,7 +38,7 @@ Some little exercises
 > 
 > 输出：3
 
-## [Exercise 2](https://github.com/haodayizhia/Exercises/blob/f75c9f3891d19755852d2fa7a7da13beffac1fcd/ex2.cpp)
+## [Exercise 2](ex2.cpp)
 
 > 游戏中的任务升级需要X经验，一共有Y个任务以及对应的Z的经验值，请问一共有多少种方法可以升级（每个任务能够完成多次）
 >
